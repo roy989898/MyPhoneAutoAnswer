@@ -4,7 +4,9 @@ import android.accessibilityservice.AccessibilityService;
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.TargetApi;
 import android.os.Build;
+
 import android.util.Log;
+
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
@@ -53,13 +55,14 @@ public class RobService extends AccessibilityService {
         AccessibilityNodeInfo nodeInfo = getRootInActiveWindow();
         if (nodeInfo != null) {
             //为了演示,直接查看了红包控件的id
-            List<AccessibilityNodeInfo> list = nodeInfo.findAccessibilityNodeInfosByViewId("com.android.incallui:id/sms_incoming_layout");
+            List<AccessibilityNodeInfo> list = nodeInfo.findAccessibilityNodeInfosByViewId("com.android.incallui:id/answerbutton");
             nodeInfo.recycle();
             for (AccessibilityNodeInfo item : list) {
                 item.performAction(AccessibilityNodeInfo.ACTION_CLICK);
+
             }
         }
-
-
     }
+
 }
+
