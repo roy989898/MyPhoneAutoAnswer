@@ -27,7 +27,7 @@ public class RobService extends AccessibilityService {
         AccessibilityServiceInfo serviceInfo = new AccessibilityServiceInfo();
         serviceInfo.eventTypes = AccessibilityEvent.TYPES_ALL_MASK;
         serviceInfo.feedbackType = AccessibilityServiceInfo.FEEDBACK_GENERIC;
-        serviceInfo.packageNames = new String[]{"com.example.pomingpo.pomautoanswer","com.facebook.katana","com.android.incallui"};
+        serviceInfo.packageNames = new String[]{"com.example.pomingpo.pomautoanswer","com.facebook.katana","com.android.incallui","com.android.providers.telephony","com.android.server.telecom"};
         serviceInfo.notificationTimeout = 100;
         setServiceInfo(serviceInfo);
     }
