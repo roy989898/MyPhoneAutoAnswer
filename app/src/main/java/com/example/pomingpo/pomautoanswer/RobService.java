@@ -7,6 +7,7 @@ import android.os.Build;
 
 import android.util.Log;
 
+import android.view.KeyEvent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
@@ -17,6 +18,10 @@ import java.util.List;
  */
 
 public class RobService extends AccessibilityService {
+    @Override
+    protected boolean onKeyEvent(KeyEvent event) {
+        return super.onKeyEvent(event);
+    }
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
